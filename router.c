@@ -273,7 +273,7 @@ void recv_thread(void* sock) {
 		strLen = recvfrom(recv_sock, message, sizeof(message), 0, (SOCKADDR*)&addr, &addr_size);
 		if (strLen < 0)
 			continue;
-		fprintf(stdout, "\n- Recive Rounting Table from %d\n\n> Input Command(s:Start p:Print q:Quit): ", addr.sin_port);
+		fprintf(stdout, "\n- Recive Rounting Table\n\n> Input Command(s:Start p:Print q:Quit): ");
 		memcpy(recv_table, message, sizeof(message));
 
 		// 3. 테이블 수정
